@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #fde7c8 0%, #f7c1d9 50%, #c7d7fb 100%);
+    color: #2b2240;
+}
+
+.card {
+    width: min(420px, 92vw);
+    padding: 2rem 2rem 2.25rem;
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 20px 50px rgba(60, 30, 90, 0.18);
+    text-align: center;
+}
+
+.title {
+    margin: 0 0 1.25rem;
+    font-size: 1.6rem;
+    letter-spacing: -0.02em;
+}
+
+.name-input {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #7a6b94;
+}
+
+.name-input input {
+    padding: 0.7rem 1rem;
+    border: 2px solid #e6dcf5;
+    border-radius: 14px;
+    font-size: 1.1rem;
+    text-align: center;
+    color: #2b2240;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.name-input input:focus {
+    border-color: #a07be0;
+}
+
+.pet {
+    margin: 1.5rem 0;
+}
+
+.pet-face {
+    display: inline-block;
+    line-height: 0;
+    color: #7c4dcc;
+    animation: bounce 0.5s ease;
+}
+
+.pet-status {
+    margin: 0.75rem 0 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.pet-name {
+    font-weight: 800;
+    color: #7c4dcc;
+}
+
+.controls {
+    display: flex;
+    gap: 0.6rem;
+    justify-content: center;
+}
+
+.controls button {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    padding: 0.8rem 0.5rem;
+    border: none;
+    border-radius: 14px;
+    background: #7c4dcc;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.1s, background 0.2s;
+}
+
+.controls button:hover {
+    background: #6a3cb8;
+}
+
+.controls button:active {
+    transform: scale(0.95);
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(0.6);
+    }
+
+    60% {
+        transform: scale(1.15);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
